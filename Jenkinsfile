@@ -19,12 +19,12 @@ pipeline {
         }
 
         stage('Install Dependencies & Test') {
-            steps {
+           
                 
-                        sh 'python3 -m pip install --upgrade pip'
-        sh 'python3 -m pip install flask pytest'
-        sh 'pytest'
+       steps {
+                sh 'pip install flask pytest'
             }
+            
         }
 
         stage('Build Docker Image') {
