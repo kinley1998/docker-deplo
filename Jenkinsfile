@@ -6,17 +6,17 @@ pipeline {
     }
 
     stages {
-        
-     stage('Clone Repo') {
-    //steps {
-    //    sh 'git clone https://github.com/kinley1998/docker-deplo.git'
-    //}
-}
+
+        stage('Clone Repo') {
+            steps {
+                // Git clone is commented out
+                // sh 'git clone https://github.com/kinley1998/docker-deplo.git'
+            }
+        }
 
         stage('Install Dependencies & Test') {
             steps {
                 sh 'pip install flask pytest'
-                
             }
         }
 
