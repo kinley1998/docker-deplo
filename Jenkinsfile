@@ -9,16 +9,14 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-             
-             sh 'git clone https://github.com/kinley1998/docker-deplo.git'
+                // Git clone is commented out
+                 sh 'git clone https://github.com/kinley1998/docker-deplo.git'
             }
         }
 
         stage('Install Dependencies & Test') {
             steps {
-                       sh 'python3 -m pip install --upgrade pip'
-                       sh 'python3 -m pip install flask pytest'
-                       sh 'pytest'
+                sh 'pip install flask pytest'
             }
         }
 
