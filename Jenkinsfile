@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    
+    agent {
+    label 'built-in'
+}
 
     environment {
         DOCKER_IMAGE = "kinley08/demo-jenkins-app"
